@@ -269,13 +269,26 @@ z-index: 9999999;
   cursor: pointer;
   display: inline-block;
   background: url("./images/whatsapp.svg") no-repeat center center;
-  background-size: contain; }
+  background-size: contain; 
+}
   @media screen and (min-width: 0) and (max-width: 480px) {
+    body {
+      font: 12px/2 "Open sans", sans-serif;
+      letter-spacing: 0.05em;
+    }
     .whatsapp {
       width: 30px;
       height: 30px;
       top: 55%; 
     } 
+    .call {
+      width: 45px;
+      height: 45px;
+      top: 55%; 
+    }
+    .arrows{
+      display: none;
+    }
   }
   @media screen and (min-width: 481px) and (max-width: 568px) {
     .whatsapp {
@@ -283,11 +296,20 @@ z-index: 9999999;
       height: 38px;
       top: 32%;
      } 
+     .call {
+      width: 38px;
+      height: 38px;
+      top: 32%; 
+    }
     }
   @media screen and (min-width: 768px) and (max-width: 3000px) {
     .whatsapp {
       display: none;
-     } }
+     } 
+     .call {
+      display: none; 
+    }
+  }
 
 .call {
   margin-top: 20px;
@@ -299,28 +321,7 @@ z-index: 9999999;
   background: url("./images/call.svg") no-repeat center center;
   background-size: contain; 
 }
-  @media screen and (min-width: 0) and (max-width: 480px) {
-    .call {
-      width: 45px;
-      height: 45px;
-      top: 55%; 
-    }
-    .arrows{
-      display: none;
-    }
-   }
-  @media screen and (min-width: 481px) and (max-width: 568px) {
-    .call {
-      width: 38px;
-      height: 38px;
-      top: 32%; 
-    }
-   }
-  @media screen and (min-width: 768px) and (max-width: 3000px) {
-    .call {
-      display: none; 
-    }
-  }
+
   .names{
     position: fixed;
     background: transparent;
