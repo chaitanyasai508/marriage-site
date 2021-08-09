@@ -56,7 +56,7 @@ function showInvitation() {
     setTimeout(function () {
         document.getElementById("main-container").style.display = "block";
         document.getElementById("pre-loader").style.display = "none";
-    }, 2000);
+    }, 1000);
 
 }
 
