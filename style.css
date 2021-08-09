@@ -562,6 +562,10 @@ background: linear-gradient(to top, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Fir
     .venue-text{
       font-size: 1.2rem;
     }
+    .actionBtn {
+      font-size: 0.7rem;
+      padding: 1px 10px;
+    }
   }
   /* @media screen and (min-width: 481px) and (max-width: 768px) { 
     .whatsapp {
