@@ -12,6 +12,7 @@ bgMusic.onended = function () {
 };
 
 /** Lazy load files */
+let isAudioOn = true;
 let dir = "", total_file = 4;
 let files_list = [
     {
@@ -65,6 +66,19 @@ function showInvitation() {
         // document.getElementById("social").style.display = "block";
     }, 1000);
 
+}
+
+function toggleAudio() {
+    if (isAudioOn) {
+        bgMusic.pause();
+        document.getElementById("audio").classList.add("sound-off");
+        document.getElementById("audio").classList.remove("sound-on");
+    } else {
+        bgMusic.play();
+        document.getElementById("audio").classList.add("sound-on");
+        document.getElementById("audio").classList.remove("sound-off");
+    }
+    isAudioOn = !isAudioOn;
 }
 
 // var love = null;

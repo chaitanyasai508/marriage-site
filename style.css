@@ -528,8 +528,21 @@ background: linear-gradient(to top, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Fir
 }
 
 
+.fixed{
+  position: fixed;
+  top:0.7rem;
+  z-index: 9999;
+  left: 0.5rem;
+}
 
-
+.sound-on{
+  width: 1.2rem;
+  background-image: url("./images/audio-on.svg");
+}
+.sound-off{
+  width: 1.2rem;
+  background-image: url("./images/audio-off.svg")
+}
 @media screen and (min-width: 0) and (max-width: 768px) {
     body {
       font: 12px/2 "Open sans", sans-serif;
