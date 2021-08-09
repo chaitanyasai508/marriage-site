@@ -53,8 +53,11 @@ function load_using_head(path, eventName, message) {
 load_file();
 
 function showInvitation() {
-    document.getElementById("main-container").style.display = "block";
-    document.getElementById("pre-loader").style.display = "none";
+    setTimeout(function () {
+        document.getElementById("main-container").style.display = "block";
+        document.getElementById("pre-loader").style.display = "none";
+    }, 2000);
+
 }
 
 // var love = null;

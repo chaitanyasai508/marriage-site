@@ -297,12 +297,16 @@ z-index: 9999999;
   cursor: pointer;
   display: block;
   background: url("./images/call.svg") no-repeat center center;
-  background-size: contain; }
+  background-size: contain; 
+}
   @media screen and (min-width: 0) and (max-width: 480px) {
     .call {
       width: 45px;
       height: 45px;
       top: 55%; 
+    }
+    .arrows{
+      display: none;
     }
    }
   @media screen and (min-width: 481px) and (max-width: 568px) {
