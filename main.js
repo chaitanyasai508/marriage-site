@@ -10,7 +10,7 @@ var bgMusic = new Audio("./assets/music.mp3");
 bgMusic.onended = function () {
     bgMusic.play();
 };
-bgMusic.play();
+
 /** Lazy load files */
 let dir = "", total_file = 4;
 let files_list = [
@@ -61,6 +61,7 @@ function showInvitation() {
     setTimeout(function () {
         document.getElementById("main-container").style.display = "block";
         document.getElementById("pre-loader").style.display = "none";
+        bgMusic.play();
         // document.getElementById("social").style.display = "block";
     }, 1000);
 
