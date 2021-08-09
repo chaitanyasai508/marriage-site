@@ -81,73 +81,27 @@ function toggleAudio() {
     isAudioOn = !isAudioOn;
 }
 
-// var love = null;
-// function loadloves(time) {
-//     love = setInterval(function() {
-//         var r_num = Math.floor(Math.random() * 40) + 1;
-//         var r_size = Math.floor(Math.random() * 20) + 10;
-//         var r_left = Math.floor(Math.random() * 100) + 1;
-//         var r_bg = Math.floor(Math.random() * 25) + 100;
-//         var r_time = Math.floor(Math.random() * 25) + 5;
-
-//         $('.bg_heart').append("<div class='heart' style='width:" + r_size + "px;  filter: blur(7px); height:" + r_size + "px;left:" + r_left + "%;background:rgba(255," + (r_bg - 25) + "," + r_bg + ",1);-webkit-animation:love " + r_time + "s ease;-moz-animation:love " + r_time + "s ease;-ms-animation:love " + r_time + "s ease;animation:love " + r_time + "s ease'></div>");
-
-//         $('.bg_heart').append("<div class='heart' style='width:" + (r_size - 10) + "px; filter: blur(2px); height:" + (r_size - 10) + "px;left:" + (r_left + r_num) + "%;background:rgba(255," + (r_bg - 25) + "," + (r_bg + 25) + ",1);-webkit-animation:love " + (r_time + 5) + "s ease;-moz-animation:love " + (r_time + 5) + "s ease;-ms-animation:love " + (r_time + 5) + "s ease;animation:love " + (r_time + 5) + "s ease'></div>");
-
-//         $('.heart').each(function() {
-//             var top = $(this).css("top").replace(/[^-\d\.]/g, '');
-//             var width = $(this).css("width").replace(/[^-\d\.]/g, '');
-//             if (top <= -100 || width >= 150) {
-//                 $(this).detach();
-//             }
-//         });
-//     }, time);
-// }
-
-
-
-/*
-var btn = document.querySelector( '.btn' );
-
-var btnFront = btn.querySelector( '.btn-front' ),
-    btnYes = btn.querySelector( '.btn-back .yes' ),
-    btnNo = btn.querySelector( '.btn-back .no' );
-
-btnFront.addEventListener( 'click', function( event ) {
-    var mx = event.clientX - btn.offsetLeft,
-        my = event.clientY - btn.offsetTop;
-
-    var w = btn.offsetWidth,
-        h = btn.offsetHeight;
-
-    var directions = [
-        { id: 'top', x: w/2, y: 0 },
-        { id: 'right', x: w, y: h/2 },
-        { id: 'bottom', x: w/2, y: h },
-        { id: 'left', x: 0, y: h/2 }
-    ];
-
-    directions.sort( function( a, b ) {
-        return distance( mx, my, a.x, a.y ) - distance( mx, my, b.x, b.y );
-    } );
-
-    btn.setAttribute( 'data-direction', directions.shift().id );
-    btn.classList.add( 'is-open' );
-
-} );
-
-btnYes.addEventListener( 'click', function( event ) {
-    btn.classList.remove( 'is-open' );
-} );
-
-btnNo.addEventListener( 'click', function( event ) {
-    btn.classList.remove( 'is-open' );
-} );
-
-function distance( x1, y1, x2, y2 ) {
-    var dx = x1-x2;
-    var dy = y1-y2;
-    return Math.sqrt( dx*dx + dy*dy );
+function newHeart() {
+    var hearts = $('.heart');
+    if (hearts.length >= 24) return setTimeout(newHeart, 1000);
+    var c = $('.heart-container:first').clone();
+    var anims = ['sideWays', 'swayWays'];
+    var a = anims[Math.round(Math.random())];
+    c.find('.heart')
+        .css('opacity', 0.2 + Math.random() * 0.8)
+        .css('-webkit-animation-name', a)
+        .css('-moz-animation-name', a);
+    c.css('left', (10 + Math.random() * ($('body').innerWidth() - 10)) + 'px');
+    c.css('-webkit-animation-name', 'fall');
+    c.css('-webkit-animation-duration', (4 + Math.random() * 14) + 's');
+    c.css('-webkit-transform', 'scale(' + (0.4 + Math.random() * 2) + ')');
+    c.css('-moz-animation-duration', (4 + Math.random() * 14) + 's');
+    c.css('-moz-transform', 'scale(' + (0.4 + Math.random() * 2) + ')');
+    $('#hearts').append(c);
+    c.bind('animationend', function () { c.remove(); });
+    c.bind('webkitAnimationEnd', function () { c.remove(); });
+    setTimeout(newHeart, 200);
 }
+setTimeout(newHeart, 100);
 
-    */
+
