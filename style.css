@@ -647,7 +647,7 @@ background: linear-gradient(to top, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Fir
 .heart {
     overflow: hidden;
     height: 30px;
-    width: 20px;
+    width: 30px;
     font-size: 20px;
     text-align: center;
     color: red;
