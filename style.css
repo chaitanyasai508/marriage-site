@@ -121,6 +121,8 @@ body {
   opacity: 1;
 }
 .slideshow .slide .caption {
+  width: 100%;
+  max-width: 600px;
   padding: 0 100px;
 }
 .slideshow .slide .image-container {
@@ -257,7 +259,8 @@ body {
 
 
 
-.social{
+#social{
+  display: none;
 position: fixed;
 top:45%;
 right: 10px;
@@ -271,46 +274,7 @@ z-index: 9999999;
   background: url("./images/whatsapp.svg") no-repeat center center;
   background-size: contain; 
 }
-  @media screen and (min-width: 0) and (max-width: 480px) {
-    body {
-      font: 12px/2 "Open sans", sans-serif;
-      letter-spacing: 0.05em;
-    }
-    .whatsapp {
-      width: 30px;
-      height: 30px;
-      top: 55%; 
-    } 
-    .call {
-      width: 45px;
-      height: 45px;
-      top: 55%; 
-    }
-    .arrows{
-      display: none;
-    }
-  }
-  @media screen and (min-width: 481px) and (max-width: 568px) {
-    .whatsapp {
-      width: 38px;
-      height: 38px;
-      top: 32%;
-     } 
-     .call {
-      width: 38px;
-      height: 38px;
-      top: 32%; 
-    }
-    }
-  @media screen and (min-width: 768px) and (max-width: 3000px) {
-    .whatsapp {
-      display: none;
-     } 
-     .call {
-      display: none; 
-    }
-  }
-
+  
 .call {
   margin-top: 20px;
   transform: rotateY(180deg);
@@ -411,11 +375,89 @@ z-index: 9999999;
 
 .inviteMessage{
   color: #fff;
-  font-size: 3rem;
+  font-size: 1.5rem;
 }
 
 .seperator{
   width:40%;
 }
 
+.first-slide{
+background: #ad5389;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #3c1053, #ad5389);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #3c1053, #ad5389); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 
+.second-slide{
+background: #000046;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.message-seperator {
+  width: 60%;
+  max-width: 400px
+}
+.message-seperator.bottom {
+  transform: rotate(180deg);
+}
+
+
+
+
+@media screen and (min-width: 0) and (max-width: 480px) {
+    body {
+      font: 12px/2 "Open sans", sans-serif;
+      letter-spacing: 0.05em;
+    }
+    .whatsapp {
+      width: 30px;
+      height: 30px;
+      top: 55%; 
+    } 
+    .call {
+      width: 45px;
+      height: 45px;
+      top: 55%; 
+    }
+    .arrows{
+      display: none;
+    }
+    .slideshow .slide .caption{
+      padding: 0 10px
+    }
+    .inviteMessage{
+      font-size: 1rem;
+      line-height: 2rem;
+    }
+  }
+  @media screen and (min-width: 481px) and (max-width: 568px) {
+    .whatsapp {
+      width: 38px;
+      height: 38px;
+      top: 32%;
+     } 
+     .call {
+      width: 38px;
+      height: 38px;
+      top: 32%; 
+    }
+    .arrows{
+      display: none;
+    }
+    .slideshow .slide .caption{
+      padding: 0 10px
+    }
+    .inviteMessage{
+      font-size: 1rem;
+      line-height: 2rem;
+    }
+    }
+  @media screen and (min-width: 768px) and (max-width: 3000px) {
+    .whatsapp {
+      display: none;
+     } 
+     .call {
+      display: none; 
+    }
+  }
