@@ -531,6 +531,7 @@ background: linear-gradient(to top, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Fir
     .inviteMessage{
       font-size: 1.4rem;
       line-height: 2rem;
+      margin:0
     }
     .slideshow .slide .title{
       font-size: 2rem;
