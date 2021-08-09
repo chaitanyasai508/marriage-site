@@ -579,6 +579,9 @@ background: linear-gradient(to top, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Fir
       font-size: 0.7rem;
       padding: 1px 10px;
     }
+    .slideshow .pagination{
+      bottom: 60px;
+    }
   }
   @media screen and (min-width: 768px) and (max-width: 3000px) {
     .whatsapp {
