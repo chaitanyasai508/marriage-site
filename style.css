@@ -419,7 +419,7 @@ background: linear-gradient(to top, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Fir
 }
 
 .message-seperator.events{
-  padding: 4rem 0;
+  padding: 2.5rem 0;
 }
 
 .share-icons{
@@ -452,6 +452,29 @@ background: linear-gradient(to top, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Fir
 .share-icons:hover{
   color: #000;
   border: 1px solid #fff ;
+}
+
+
+.iconContainer{
+  padding:0.5rem
+}
+.icons{
+  width:2rem;
+  aspect-ratio: 1;
+  color: #fff;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-right: 1rem;
+  cursor: pointer;
+}
+
+.call-ico{
+  background-image: url("./images/phone.svg");
+}
+
+.location{
+  background-image: url("./images/location.svg");
 }
 
 
