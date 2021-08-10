@@ -8,8 +8,8 @@
 // var myScreenOrientation = window.screen.orientation;
 // myScreenOrientation.lock("portrait");
 
-locOrientation = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation || screen.orientation.lock;
-locOrientation('portrait-primary');
+// locOrientation = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation || screen.orientation.lock;
+// locOrientation('portrait-primary');
 
 var bgMusic = new Audio("./assets/music.mp3");
 bgMusic.onended = function () {
