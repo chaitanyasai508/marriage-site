@@ -29,11 +29,11 @@ html {
 }
 
 .frame{
-  background: url("./images/frame.svg");
+  background: url("./images/frame1.svg");
   background-repeat: round;
-  width: 70%;
-  aspect-ratio: 1;
-  max-width: 450px;
+  /* width: 70%;
+  aspect-ratio: 1; */
+  /* max-width: 450px; */
   display: flex;
   align-items: center;
   justify-content: center;

@@ -17,9 +17,9 @@ bgMusic.onended = function () {
 };
 
 /** Lazy load files */
-let isAudioOn = true;
-let dir = "", total_file = 4;
-let files_list = [
+var isAudioOn = true;
+var dir = "", total_file = 4;
+var files_list = [
     {
         path: "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js",
         message: "Loading file 2/" + total_file,
@@ -38,7 +38,7 @@ let files_list = [
         message: "Loading file 5/" + total_file
     }
 ];
-let file_count = files_list.length;
+var file_count = files_list.length;
 
 function load_file(last_loaded_event) {
     if (last_loaded_event && last_loaded_event == 'jquery_loaded') {
@@ -62,6 +62,31 @@ function load_using_head(path, eventName, message) {
 }
 
 load_file();
+
+function setImage() {
+    var imageDiv = document.getElementById("frame");
+    var width = 0, height = 0;
+    var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+    if (window.innerWidth > 550) {
+        width = 450;
+        height = width;
+    } else {
+        width = window.innerWidth / 1.45;
+        height = width;
+    }
+
+    imageDiv.style.width = width + "px";
+    if (isSafari) {
+        imageDiv.style.height = (height / 1.15) + "px";
+    } else {
+        imageDiv.style.height = height + "px";
+    }
+
+}
+setImage();
+window.onload = setImage;
+window.onresize = setImage;
 
 function showInvitation() {
     setTimeout(function () {
