@@ -473,7 +473,7 @@ background: linear-gradient(to top, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Fir
 }
 .icons{
   width:2rem;
-  aspect-ratio: 1;
+  height: 2rem;
   color: #fff;
   display: inline-block;
   background-repeat: no-repeat;
