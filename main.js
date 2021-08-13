@@ -57,11 +57,11 @@ function load_using_head(path, eventName, message) {
         load_file(eventName);
     });
 }
-
+load_file();
 
 
 // window.onload = setImage;
-window.onresize = setImage;
+// window.onresize = setImage;
 
 function showInvitation() {
     setTimeout(function () {

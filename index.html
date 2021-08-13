@@ -17,48 +17,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
-  <script type="text/javascript">
-    var timer;
-    function lazyLoad() {
-      if (load_file) {
-        load_file();
-      } else {
-        setTimeout(lazyLoad, 500);
-      }
-    }
-    function setImage() {
-      console.log("imagr  loaded");
-      var imageDiv = document.getElementById("frame");
-      var width = 0, height = 0;
-      var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-      lazyLoad();
-      if (window.innerWidth > 550) {
-        document.getElementById("banner1").src = "./images/bg1.jpeg";
-        document.getElementById("banner2").src = "./images/bg2.jpeg";
-        width = 450;
-        height = width;
-      } else {
-        document.getElementById("banner1").src = "./images/bg1.jpeg";
-        document.getElementById("banner2").src = "./images/bg2.jpeg";
-        width = window.innerWidth / 1.45;
-        height = width;
-      }
-
-      imageDiv.style.width = width + "px";
-      if (isSafari) {
-        imageDiv.style.height = (height / 1.15) + "px";
-      } else {
-        imageDiv.style.height = height + "px";
-      }
-    }
-  </script>
 </head>
 
 <body>
   <!-- partial:index.partial.html -->
   <main id="wrapper" class="main-content">
     <div id="pre-loader">
-      <img id="frame" src="./images/frame1.svg" onload="setImage()">
+      <img id="frame" width="80%" style="max-width: 450px;" src="./images/frame2.svg">
       <a id="invitation" class="actionBtn" onclick="showInvitation();"><span>Show invitation</span></a>
       <p id="loadingtext">Loading...</p>
     </div>
@@ -99,7 +64,7 @@
                 </div>
               </div>
               <div class="image-container">
-                <img id="banner1" alt="" class="image" />
+                <img id="banner1" src="./images/bg1.jpeg" alt="" class="image" />
               </div>
             </div>
             <div class="slide second-slide">
@@ -137,7 +102,7 @@
                 </div>
               </div>
               <div class="image-container">
-                <img id="banner2" alt="" class="image" />
+                <img id="banner2" src="./images/bg2.jpeg" alt="" class="image" />
               </div>
             </div>
           </div>
