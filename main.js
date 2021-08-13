@@ -11,20 +11,15 @@
 // locOrientation = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation || screen.orientation.lock;
 // locOrientation('portrait-primary');
 
-var bgMusic = new Audio("./assets/music.mp3");
-bgMusic.onended = function () {
-    bgMusic.play();
-};
+// var bgMusic = new Audio("./assets/music.mp3");
+// bgMusic.onended = function () {
+//     bgMusic.play();
+// };
 
 /** Lazy load files */
 var isAudioOn = true;
 var dir = "", total_file = 4;
 var files_list = [
-    {
-        path: "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js",
-        message: "Loading file 2/" + total_file,
-        eventName: 'jquery_loaded'
-    },
     {
         path: "./lib.js",
         message: "Loading file 3/" + total_file,
@@ -67,7 +62,6 @@ function showInvitation() {
     setTimeout(function () {
         document.getElementById("main-container").style.display = "block";
         document.getElementById("pre-loader").style.display = "none";
-        bgMusic.play();
         // document.getElementById("social").style.display = "block";
     }, 1000);
 
@@ -75,11 +69,11 @@ function showInvitation() {
 
 function toggleAudio() {
     if (isAudioOn) {
-        bgMusic.pause();
+        document.getElementById("myAudio").muted = true;
         document.getElementById("audio").classList.add("sound-off");
         document.getElementById("audio").classList.remove("sound-on");
     } else {
-        bgMusic.play();
+        document.getElementById("myAudio").muted = false;
         document.getElementById("audio").classList.add("sound-on");
         document.getElementById("audio").classList.remove("sound-off");
     }
