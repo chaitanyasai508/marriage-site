@@ -41,9 +41,6 @@ var files_list = [
 var file_count = files_list.length;
 
 function load_file(last_loaded_event) {
-    if (last_loaded_event && last_loaded_event == 'jquery_loaded') {
-        console.log("jquery loaded");
-    }
     if (files_list.length > 0) {
         var t = files_list.shift();
         console.log("loading", t.message)
@@ -61,31 +58,9 @@ function load_using_head(path, eventName, message) {
     });
 }
 
-load_file();
 
-function setImage() {
-    var imageDiv = document.getElementById("frame");
-    var width = 0, height = 0;
-    var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
-    if (window.innerWidth > 550) {
-        width = 450;
-        height = width;
-    } else {
-        width = window.innerWidth / 1.45;
-        height = width;
-    }
-
-    imageDiv.style.width = width + "px";
-    if (isSafari) {
-        imageDiv.style.height = (height / 1.15) + "px";
-    } else {
-        imageDiv.style.height = height + "px";
-    }
-
-}
-setImage();
-window.onload = setImage;
+// window.onload = setImage;
 window.onresize = setImage;
 
 function showInvitation() {
