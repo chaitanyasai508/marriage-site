@@ -144,8 +144,11 @@
       </section>
     </div>
   </main>
-  <div class="fixed">
+  <div class="fixed intro-banner-vdo-play-btn">
     <span id="audio" class="icons sound-on" onclick="toggleAudio();"></span>
+    <span class="ripple pinkBg"></span>
+    <span class="ripple pinkBg"></span>
+    <span class="ripple pinkBg"></span>
   </div>
   <div id="hearts">
     <div class="heart-container">
@@ -154,9 +157,12 @@
       </div>
     </div>
   </div>
-  <audio id="myAudio" loop autoplay>
+  <iframe src="./assets/silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
+
+  <!-- <iframe src="./assets/music.mp3" type="audio/mp3" allow="autoplay" id="audio" style="display:none"></iframe> -->
+  <!-- <audio id="myAudio" loop>
     <source src="./assets/music.mp3" type="audio/mpeg">
-  </audio>
+  </audio> -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script type="text/javascript" src="./main.js"></script>
 </body>
