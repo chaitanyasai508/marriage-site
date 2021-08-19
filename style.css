@@ -615,10 +615,10 @@ background: linear-gradient(to top, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Fir
       letter-spacing: 0.05em;
     }
     .whatsapp {
-      width: 30px;
-      height: 30px;
-      top: 55%; 
-    } 
+      bottom: 0; 
+      right: 0;
+      z-index: 9999999
+      } 
     .call {
       width: 45px;
       height: 45px;

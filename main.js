@@ -41,7 +41,6 @@ function load_file(last_loaded_event) {
         document.getElementById("loadingtext").style.display = "none";
     }
 }
-
 function countViews() {
     var oReq = new XMLHttpRequest();
     oReq.open("GET", "https://api.countapi.xyz/hit/chaywedsdivya-in/marriage/?amount=1");
@@ -56,7 +55,6 @@ function load_using_head(path, eventName, message) {
     });
 }
 load_file();
-
 function showInvitation() {
     sbvplay.play();
     setTimeout(function () {
@@ -74,21 +72,18 @@ function turnOffAudio() {
     document.getElementById("audio-on").style.display = "none";
     document.getElementById("audio-off").style.display = "inline-block";
 }
-
 function turnOnAudio() {
     sbvplay.play();
     hideRipples();
     document.getElementById("audio-off").style.display = "none";
     document.getElementById("audio-on").style.display = "inline-block";
 }
-
 function hideRipples() {
     var divsToHide = document.getElementsByClassName("ripple"); //divsToHide is an array
     for (var i = 0; i < divsToHide.length; i++) { // or
         divsToHide[i].style.display = "none"; // depending on what you're doing
     }
 }
-
 function newHeart() {
     var hearts = $('.heart');
     if (hearts.length >= 24) return setTimeout(newHeart, 1000);
