@@ -42,6 +42,13 @@ function load_file(last_loaded_event) {
     }
 }
 
+function countViews() {
+    var oReq = new XMLHttpRequest();
+    oReq.open("GET", "https://api.countapi.xyz/hit/chaywedsdivya-in/marriage/?amount=1");
+    oReq.responseType = "json";
+    oReq.send();
+}
+countViews();
 function load_using_head(path, eventName, message) {
     head.load(path, function () {
         document.getElementById("loadingtext").innerHTML = Math.round(((file_count - files_list.length) / file_count) * 100) + " % Loaded";
