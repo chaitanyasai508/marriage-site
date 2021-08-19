@@ -616,8 +616,8 @@ background: linear-gradient(to top, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Fir
     }
     .whatsapp {
       position: fixed;
-      bottom: 0; 
-      right: 0;
+      bottom: 5px; 
+      right: 5px;
       z-index: 9999999
       } 
     .call {
