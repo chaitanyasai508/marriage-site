@@ -615,6 +615,7 @@ background: linear-gradient(to top, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Fir
       letter-spacing: 0.05em;
     }
     .whatsapp {
+      position: fixed;
       bottom: 0; 
       right: 0;
       z-index: 9999999
